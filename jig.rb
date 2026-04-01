@@ -5,21 +5,21 @@
 class Jig < Formula
   desc "Claude Code session configurator — manage profiles, MCP servers, and launch settings via a terminal UI"
   homepage "https://github.com/jdforsythe/jig"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jdforsythe/jig/releases/download/v0.1.1/jig_darwin_amd64.tar.gz"
-      sha256 "38ff91a324ad3fa3beed63a36802901607742a254d05a613724c1f7ee9dec76f"
+      url "https://github.com/jdforsythe/jig/releases/download/v0.1.2/jig_darwin_amd64.tar.gz"
+      sha256 "25611a95a8832b8aff3b94b1b368596179e0bec982f2a749250468935d8f0b5d"
 
       define_method(:install) do
         bin.install "jig"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jdforsythe/jig/releases/download/v0.1.1/jig_darwin_arm64.tar.gz"
-      sha256 "0f94c689d8fd17a15bea0efd938a284c0a1d701fd79c71e6154b2b823630a352"
+      url "https://github.com/jdforsythe/jig/releases/download/v0.1.2/jig_darwin_arm64.tar.gz"
+      sha256 "685feb88d4d49f4ad819795df396bc97197ebe0fa9e9be6350571327eb1dbf63"
 
       define_method(:install) do
         bin.install "jig"
@@ -29,15 +29,15 @@ class Jig < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdforsythe/jig/releases/download/v0.1.1/jig_linux_amd64.tar.gz"
-      sha256 "aaf8cbd82276b784cd68a50e40911a6b84e7d582f3f9cafd1cb70d914c17f7cc"
+      url "https://github.com/jdforsythe/jig/releases/download/v0.1.2/jig_linux_amd64.tar.gz"
+      sha256 "9c1ad43fba21a51a269596dc33bb7e0782b8ccd1abba92de03980b6ae0d4821e"
       define_method(:install) do
         bin.install "jig"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jdforsythe/jig/releases/download/v0.1.1/jig_linux_arm64.tar.gz"
-      sha256 "9126980f0c6fbb1cc1682126211d6ad0eae472eb872772b3ae6e174141d4a743"
+      url "https://github.com/jdforsythe/jig/releases/download/v0.1.2/jig_linux_arm64.tar.gz"
+      sha256 "2bc28e5638ae62072e13d9f3c9cb3cfcd31e689d1e6570d22c3899fb05f82e4f"
       define_method(:install) do
         bin.install "jig"
       end
